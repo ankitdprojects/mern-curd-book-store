@@ -1,0 +1,15 @@
+.Home-Page {
+    width: 100%;
+    min-height: 91.5vh;
+    max-height: auto;
+}
+
+
+.viewBook{
+    text-decoration: none;
+    color: white;
+}
+
+.viewBook:hover{
+    color: aliceblue;
+}
