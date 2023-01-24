@@ -10,6 +10,8 @@ app.use(express.json())
 app.use(cors())
 app.use('/api/v1',router)
 
-app.listen("https://mern-curd-book-store-backend.vercel.app" || 3000 , () => {
+const port = 'https://mern-curd-book-store-backend.vercel.app/'
+
+app.listen( port || 3000 , () => {
     console.log('SERVER STARTED')
 })
