@@ -6,7 +6,7 @@ const Books = () => {
     const [Data, setData] = useState();
     useEffect(() => {
         const fetch = async () => {
-            await axios.get("http://localhost:3000/api/v1/getBooks" || 'https://mern-curd-book-store-backend.vercel.app/api/v1/getBooks')
+            await axios.get('https://mern-curd-book-store-backend.vercel.app/api/v1/getBooks')
             .then((res) => setData(res.data.books))
         };
         fetch();
