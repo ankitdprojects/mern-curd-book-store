@@ -24,10 +24,10 @@ const AddBooks = () => {
     setData({...Data,[name]: value })
   }
   const submit = async() => {
-    await axios.post('http://localhost:3000/api/v1/add', Data)
+    await axios.post('http://localhost:3000/api/v1/add' || 'https://mern-curd-book-store-backend.vercel.app/api/v1/add', Data)
     .then((res) => {
         console.log(res)
-        axios.get("http://localhost:3000/api/v1/getBooks")
+        axios.get("http://localhost:3000/api/v1/getBooks" || 'https://mern-curd-book-store-backend.vercel.app/api/v1/getBooks')
         .then((res)=>{
             setData(res.data)
         })
