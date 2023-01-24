@@ -1,6 +1,6 @@
 import express from 'express'; 
-import './Connenction/Connection.js';
-import router from './Connenction/Routes/bookRoutes.js';
+import './Connection/Connection.js';
+import router from './Connection/Routes/bookRoutes.js';
 import cors from 'cors';
 import dotenv from "dotenv";
 
