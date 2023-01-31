@@ -10,9 +10,9 @@ const BooksSection = ({ data, dataset }) => {
   const [ updatePrice, setUpdatePrice ] = useState();
 
   const deleteBook = async (id) => {
-    await axios.delete(`http://localhost:3000/api/v1/deleteBook/${id}`)
+    await axios.delete(`https://mern-curd-book-store-backend.vercel.app/api/v1/deleteBook/${id}`)
       .then((res) => {
-        axios.get("http://localhost:3000/api/v1/getBooks")
+        axios.get("https://mern-curd-book-store-backend.vercel.app/api/v1/getBooks")
         .then((res)=>{
           dataset(res.data.books)
       })
@@ -21,11 +21,11 @@ const BooksSection = ({ data, dataset }) => {
       .catch((error) => console.log(error))
   }
   const getBooks = async() => {
-    const { data } = await axios.get("http://localhost:3000/api/v1/getBooks");
+    const { data } = await axios.get("https://mern-curd-book-store-backend.vercel.app/api/v1/getBooks");
     return data.books;
   }
   const updateBook = async (id, data) => {
-    await axios.put(`http://localhost:3000/api/v1/updateBook/${id}`, data)
+    await axios.put(`https://mern-curd-book-store-backend.vercel.app/api/v1/updateBook/${id}`, data)
       .then(res => console.log(res))
       .catch(err => console.log(err))
   }
